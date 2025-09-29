@@ -1,53 +1,53 @@
-@extends('layouts.app')
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="text-xl font-semibold text-[#3E0703]">Add Enrollment</h2>
+    </x-slot>
 
-@section('content')
-<div class="container mx-auto p-4">
-    <h1 class="text-2xl font-bold mb-4">Add Enrollment</h1>
+    <div class="w-full px-6 mt-6">
+        @if($errors->any())
+            <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-2 rounded mb-4">
+                <ul class="list-disc pl-5">
+                    @foreach($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
 
-    @if($errors->any())
-        <div class="bg-red-100 p-2 mb-4">
-            <ul>
-                @foreach($errors->all() as $error)
-                    <li class="text-red-700">{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
+        <form action="{{ route('enrollments.store') }}" method="POST">
+            @csrf
 
-    <form action="{{ route('enrollments.store') }}" method="POST">
-        @csrf
+            <!-- Student -->
+            <div class="mb-4">
+                <label class="block text-gray-700">Student</label>
+                <input type="text" name="student_name" class="w-full border rounded px-3 py-2" placeholder="Type student name" required>
+            </div>
 
-        <div class="mb-4">
-            <label class="block mb-1">Student</label>
-            <select name="student_id" class="border p-2 w-full" required>
-                <option value="">Select Student</option>
-                @foreach($students as $student)
-                    <option value="{{ $student->id }}">{{ $student->name }}</option>
-                @endforeach
-            </select>
-        </div>
+            <!-- Course -->
+            <div class="mb-4">
+                <label class="block text-gray-700">Course</label>
+                <input type="text" name="course_title" class="w-full border rounded px-3 py-2" placeholder="Type course title" required>
+            </div>
 
-        <div class="mb-4">
-            <label class="block mb-1">Course</label>
-            <select name="course_id" class="border p-2 w-full" required>
-                <option value="">Select Course</option>
-                @foreach($courses as $course)
-                    <option value="{{ $course->id }}">{{ $course->title }}</option>
-                @endforeach
-            </select>
-        </div>
+            <!-- Enrolled At -->
+            <div class="mb-4">
+                <label class="block text-gray-700">Enrolled At</label>
+                <input type="date" name="enrolled_at" class="w-full border rounded px-3 py-2" required>
+            </div>
 
-        <div class="mb-4">
-            <label class="block mb-1">Enrolled At</label>
-            <input type="date" name="enrolled_at" class="border p-2 w-full" required>
-        </div>
+            <!-- Status -->
+            <div class="mb-4">
+                <label class="block text-gray-700">Status</label>
+                <select name="status" class="w-full border rounded px-3 py-2" required>
+                    <option value="active">Active</option>
+                    <option value="completed">Completed</option>
+                    <option value="dropped">Dropped</option>
+                </select>
+            </div>
 
-        <div class="mb-4">
-            <label class="block mb-1">Status</label>
-            <input type="text" name="status" class="border p-2 w-full" required>
-        </div>
-
-        <button type="submit" class="bg-blue-600 text-white p-2 rounded">Save Enrollment</button>
-    </form>
-</div>
-@endsection
+            <button type="submit" class="bg-[#3E0703] text-white px-4 py-2 rounded hover:bg-[#5a0a05]">
+                Save Enrollment
+            </button>
+        </form>
+    </div>
+</x-app-layout>

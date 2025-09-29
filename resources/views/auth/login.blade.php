@@ -30,12 +30,26 @@
             <form method="POST" action="{{ route('login') }}" class="mt-8 space-y-6">
                 @csrf
 
+                <!-- Role Selection -->
+                <div>
+                    <label for="role" class="block text-sm font-medium text-gray-700">Sign in as</label>
+                    <div class="mt-1 relative rounded-md shadow-sm">
+                        <select id="role" name="role" required
+                            class="appearance-none block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#3E0703] transition duration-150 ease-in-out sm:text-sm">
+                            <option value="" disabled selected>-- Select Role --</option>
+                            <option value="Registrar">Registrar</option>
+                            <option value="Student">Student</option>
+                            <option value="Faculty">Faculty</option>
+                        </select>
+                    </div>
+                </div>
+
                 <!-- Email Field -->
                 <div>
                     <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
                     <div class="mt-1 relative rounded-md shadow-sm">
                         <input id="email" name="email" type="email" required autofocus autocomplete="username"
-                            class="appearance-none block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 transition duration-150 ease-in-out sm:text-sm">
+                            class="appearance-none block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#3E0703] transition duration-150 ease-in-out sm:text-sm">
                     </div>
                 </div>
 
@@ -44,7 +58,7 @@
                     <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
                     <div class="mt-1 relative rounded-md shadow-sm">
                         <input id="password" name="password" type="password" required autocomplete="current-password"
-                            class="appearance-none block w-full px-4 py-3 pr-12 border border-gray-300 rounded-lg focus:ring-2 transition duration-150 ease-in-out sm:text-sm">
+                            class="appearance-none block w-full px-4 py-3 pr-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#3E0703] transition duration-150 ease-in-out sm:text-sm">
                         <button type="button" onclick="togglePasswordVisibility()"
                                 class="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-500 hover:text-gray-700 focus:outline-none">
                             <svg id="eye-open" class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="display: none;">

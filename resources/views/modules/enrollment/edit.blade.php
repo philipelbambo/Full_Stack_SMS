@@ -53,9 +53,7 @@
                 <button type="submit" class="bg-[#3E0703] text-white px-4 py-2 rounded hover:bg-[#5a0a05]">
                     Update
                 </button>
-
-                <a href="{{ route('enrollments.index') }}"
-                   class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">
+                <a href="{{ route('enrollments.index') }}" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">
                     Cancel
                 </a>
             </div>
