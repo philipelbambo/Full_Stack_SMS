@@ -6,25 +6,23 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::table('student_complaints', function (Blueprint $table) {
-            // ✅ Add student_name column
-            $table->string('student_name')->after('id');
+            // Add the column only if it doesn't exist
+            if (!Schema::hasColumn('student_complaints', 'student_name')) {
+                $table->string('student_name')->after('id');
+            }
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::table('student_complaints', function (Blueprint $table) {
-            // ✅ Drop student_name if rolled back
-            $table->dropColumn('student_name');
+            // Drop the column only if it exists
+            if (Schema::hasColumn('student_complaints', 'student_name')) {
+                $table->dropColumn('student_name');
+            }
         });
     }
 };

@@ -17,4 +17,11 @@ class Course extends Model
         'duration_weeks',
         'is_active',
     ];
+
+    public function students()
+    {
+        return $this->belongsToMany(Student::class, 'enrollments', 'course_id', 'student_id')
+                    ->withPivot('enrolled_at', 'status')
+                    ->withTimestamps();
+    }
 }

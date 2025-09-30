@@ -9,9 +9,13 @@ class StudentComplaint extends Model
 {
     use HasFactory;
 
+    protected $table = 'student_complaints';
+
     protected $fillable = [
         'student_name',
-        'title',
-        'description',
+        'complaint',   // replace/add any other columns your table has
+        'status',
+        'created_at',
+        'updated_at'
     ];
 }

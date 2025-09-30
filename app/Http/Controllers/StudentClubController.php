@@ -9,7 +9,6 @@ class StudentClubController extends Controller
 {
     public function index()
     {
-        // Get latest clubs with pagination
         $clubs = StudentClub::latest()->paginate(10);
         return view('modules.student_clubs.index', compact('clubs'));
     }

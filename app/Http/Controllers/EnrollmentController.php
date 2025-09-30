@@ -20,43 +20,55 @@ class EnrollmentController extends Controller
 
     public function create()
     {
-        return view('modules.enrollment.create');
+        $students = Student::all();
+        return view('modules.enrollment.create', compact('students'));
     }
 
     public function store(Request $request)
     {
         $request->validate([
-            'student_name' => 'required|string|max:255',
+            'student_id'   => 'nullable|exists:students,id',
+            'student_name' => 'required_without:student_id|string|max:255',
             'course_title' => 'required|string|max:255',
-            'enrolled_at' => 'nullable|date',
-            'status' => 'required|string',
+            'course_code'  => 'nullable|string|max:20',
+            'instructor_name' => 'nullable|string|max:255',
+            'credits' => 'nullable|integer',
+            'duration_weeks' => 'nullable|integer',
+            'enrolled_at'  => 'nullable|date',
+            'status'       => 'required|string|max:50',
         ]);
 
-        // Find or create student
-        $student = Student::firstOrCreate(
-            ['name' => $request->student_name],
-            [
-                'gender' => 'Unknown',
-                'email' => strtolower(str_replace(' ', '.', $request->student_name)) . '@example.com',
-                'dob' => now()->subYears(18)->format('Y-m-d'),
-                'age' => 18,
-            ]
-        );
+        // Use existing student or create new one
+        $student = $request->student_id 
+            ? Student::find($request->student_id)
+            : Student::firstOrCreate(
+                ['name' => $request->student_name],
+                [
+                    'gender' => 'Unknown',
+                    'email' => strtolower(str_replace(' ', '.', $request->student_name)) . '@example.com',
+                    'dob' => now()->subYears(18)->format('Y-m-d'),
+                    'age' => 18,
+                ]
+            );
 
-        // Find or create course with default code
+        // Use existing course or create new one
         $course = Course::firstOrCreate(
             ['title' => $request->course_title],
             [
-                'code' => strtoupper(substr($request->course_title, 0, 4)) . rand(100, 999)
+                'code' => $request->course_code ?? strtoupper(substr($request->course_title, 0, 4)) . rand(100, 999),
+                'instructor_name' => $request->instructor_name ?? 'TBA', // Fixed here
+                'credits' => $request->credits ?? 3,
+                'duration_weeks' => $request->duration_weeks ?? 16,
+                'is_active' => $request->is_active ?? false,
             ]
         );
 
         // Create enrollment
         Enrollment::create([
             'student_id' => $student->id,
-            'course_id' => $course->id,
-            'enrolled_at' => $request->enrolled_at,
-            'status' => $request->status,
+            'course_id'  => $course->id,
+            'enrolled_at' => $request->enrolled_at ?? now(),
+            'status'     => $request->status,
         ]);
 
         return redirect()->route('enrollments.index')
@@ -70,40 +82,52 @@ class EnrollmentController extends Controller
 
     public function edit(Enrollment $enrollment)
     {
-        return view('modules.enrollment.edit', compact('enrollment'));
+        $students = Student::all();
+        return view('modules.enrollment.edit', compact('enrollment', 'students'));
     }
 
     public function update(Request $request, Enrollment $enrollment)
     {
         $request->validate([
-            'student_name' => 'required|string|max:255',
+            'student_id'   => 'nullable|exists:students,id',
+            'student_name' => 'required_without:student_id|string|max:255',
             'course_title' => 'required|string|max:255',
-            'enrolled_at' => 'nullable|date',
-            'status' => 'required|string',
+            'course_code'  => 'nullable|string|max:20',
+            'instructor_name' => 'nullable|string|max:255',
+            'credits' => 'nullable|integer',
+            'duration_weeks' => 'nullable|integer',
+            'enrolled_at'  => 'nullable|date',
+            'status'       => 'required|string|max:50',
         ]);
 
-        $student = Student::firstOrCreate(
-            ['name' => $request->student_name],
-            [
-                'gender' => 'Unknown',
-                'email' => strtolower(str_replace(' ', '.', $request->student_name)) . '@example.com',
-                'dob' => now()->subYears(18)->format('Y-m-d'),
-                'age' => 18,
-            ]
-        );
+        $student = $request->student_id 
+            ? Student::find($request->student_id)
+            : Student::firstOrCreate(
+                ['name' => $request->student_name],
+                [
+                    'gender' => 'Unknown',
+                    'email' => strtolower(str_replace(' ', '.', $request->student_name)) . '@example.com',
+                    'dob' => now()->subYears(18)->format('Y-m-d'),
+                    'age' => 18,
+                ]
+            );
 
         $course = Course::firstOrCreate(
             ['title' => $request->course_title],
             [
-                'code' => strtoupper(substr($request->course_title, 0, 4)) . rand(100, 999)
+                'code' => $request->course_code ?? strtoupper(substr($request->course_title, 0, 4)) . rand(100, 999),
+                'instructor_name' => $request->instructor_name ?? 'TBA', // Fixed here
+                'credits' => $request->credits ?? 3,
+                'duration_weeks' => $request->duration_weeks ?? 16,
+                'is_active' => $request->is_active ?? false,
             ]
         );
 
         $enrollment->update([
-            'student_id' => $student->id,
-            'course_id' => $course->id,
-            'enrolled_at' => $request->enrolled_at,
-            'status' => $request->status,
+            'student_id'  => $student->id,
+            'course_id'   => $course->id,
+            'enrolled_at' => $request->enrolled_at ?? now(),
+            'status'      => $request->status,
         ]);
 
         return redirect()->route('enrollments.index')

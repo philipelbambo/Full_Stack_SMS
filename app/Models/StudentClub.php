@@ -9,6 +9,8 @@ class StudentClub extends Model
 {
     use HasFactory;
 
+    protected $table = 'student_clubs';
+
     protected $fillable = [
         'student_name',
         'club_name',
@@ -16,6 +18,6 @@ class StudentClub extends Model
         'description',
         'start_date',
         'end_date',
-        'is_current',
+        'is_current'
     ];
 }
