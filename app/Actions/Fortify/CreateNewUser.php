@@ -20,32 +20,37 @@ class CreateNewUser implements CreatesNewUsers
      */
     public function create(array $input): User
     {
+    
         Validator::make($input, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'name'     => ['required', 'string', 'max:255'],
+            'email'    => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => $this->passwordRules(),
-            'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['accepted', 'required'] : [],
-            'role' => ['required', 'string'], // ✅ role is required
+            'terms'    => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['accepted', 'required'] : [],
+            'role'     => ['required', 'string'],
         ])->validate();
 
-        // Normalize role input (case-insensitive)
-        $roleLower = strtolower($input['role'] ?? '');
-        $allowed = ['registrar', 'faculty', 'student', 'guest'];
+    
+        $allowedRoles = [
+            'registrar' => 'Registrar',
+            'faculty'   => 'Faculty',
+            'student'   => 'Student',
+            'guest'     => 'Guest',
+        ];
 
-        if (! in_array($roleLower, $allowed, true)) {
+    
+        $roleKey = strtolower(trim($input['role']));
+
+        if (! array_key_exists($roleKey, $allowedRoles)) {
             throw ValidationException::withMessages([
-                'role' => ['The selected role is invalid.'],
+                'role' => ['The selected role is invalid. Allowed roles: ' . implode(', ', $allowedRoles)],
             ]);
         }
 
-        // Convert to proper format for DB enum
-        $roleForDB = ucfirst($roleLower); // e.g. "student" -> "Student"
-
         return User::create([
-            'name' => $input['name'],
-            'email' => $input['email'],
+            'name'     => $input['name'],
+            'email'    => $input['email'],
             'password' => Hash::make($input['password']),
-            'role' => $roleForDB, // ✅ saved properly
+            'role'     => $allowedRoles[$roleKey], // Always stored with proper formatting
         ]);
     }
 }
