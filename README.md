@@ -36,7 +36,7 @@ To set up the project, follow the usual **Laravel installation process**:
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/student-management-system.git
+git clone https://github.com/philipelbambo/Full_Stack_SMS.git
 
 # Go to project folder
 cd sms-laravel
@@ -57,4 +57,4 @@ php artisan serve
 ```
 ---
 ### 👥 Contributors
-- Rj Belleza - *Developer*
+- Philip Elbambo - *Developer*

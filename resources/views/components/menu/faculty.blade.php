@@ -14,7 +14,7 @@
 
     <!-- ✅ Archived -->
     <li class="slide">
-        <a href="#" class="side-menu__item text-gray-700">
+        <a href="{{ route('archived.index') }}" class="side-menu__item text-gray-700">
             <i class="w-6 h-4 side-menu__icon bi bi-archive text-gray-700"></i>
             <span class="side-menu__label text-gray-700">Archived</span>
         </a>
@@ -22,7 +22,7 @@
 
     <!-- ✅ Trash Bin -->
     <li class="slide">
-        <a href="#" class="side-menu__item text-gray-700">
+        <a href="{{ route('trash.index') }}" class="side-menu__item text-gray-700">
             <i class="w-6 h-4 side-menu__icon bi bi-trash text-gray-700"></i>
             <span class="side-menu__label text-gray-700">Trash Bin</span>
         </a>

@@ -21,7 +21,9 @@ class EnrollmentController extends Controller
     public function create()
     {
         $students = Student::all();
-        return view('modules.enrollment.create', compact('students'));
+        $courses = Course::all();
+
+        return view('modules.enrollment.create', compact('students', 'courses'));
     }
 
     public function store(Request $request)
@@ -56,7 +58,7 @@ class EnrollmentController extends Controller
             ['title' => $request->course_title],
             [
                 'code' => $request->course_code ?? strtoupper(substr($request->course_title, 0, 4)) . rand(100, 999),
-                'instructor_name' => $request->instructor_name ?? 'TBA', // Fixed here
+                'instructor_name' => $request->instructor_name ?? 'TBA',
                 'credits' => $request->credits ?? 3,
                 'duration_weeks' => $request->duration_weeks ?? 16,
                 'is_active' => $request->is_active ?? false,
@@ -83,7 +85,9 @@ class EnrollmentController extends Controller
     public function edit(Enrollment $enrollment)
     {
         $students = Student::all();
-        return view('modules.enrollment.edit', compact('enrollment', 'students'));
+        $courses = Course::all();
+
+        return view('modules.enrollment.edit', compact('enrollment', 'students', 'courses'));
     }
 
     public function update(Request $request, Enrollment $enrollment)
@@ -116,7 +120,7 @@ class EnrollmentController extends Controller
             ['title' => $request->course_title],
             [
                 'code' => $request->course_code ?? strtoupper(substr($request->course_title, 0, 4)) . rand(100, 999),
-                'instructor_name' => $request->instructor_name ?? 'TBA', // Fixed here
+                'instructor_name' => $request->instructor_name ?? 'TBA',
                 'credits' => $request->credits ?? 3,
                 'duration_weeks' => $request->duration_weeks ?? 16,
                 'is_active' => $request->is_active ?? false,

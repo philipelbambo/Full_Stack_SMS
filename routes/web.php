@@ -14,6 +14,10 @@ use App\Http\Controllers\CourseHistoryController;
 use App\Http\Controllers\StudentComplaintController;
 use App\Http\Controllers\StudentClubController;
 use App\Http\Controllers\AssignedSubjectController;
+use App\Http\Controllers\ArchivedController; // ✅ added for Archived module
+use App\Http\Controllers\TrashController;
+
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -135,4 +139,13 @@ Route::middleware([
         Route::delete('/{assignedSubject}', [AssignedSubjectController::class, 'destroy'])->name('destroy');
     });
 
+    // ✅ Archived module (added safely)
+    Route::resource('archived', ArchivedController::class);
+
+
+    Route::get('/trash', [TrashController::class, 'index'])->name('trash.index');
+    Route::post('/trash/{id}/restore', [TrashController::class, 'restore'])->name('trash.restore');
+    Route::delete('/trash/{id}', [TrashController::class, 'destroy'])->name('trash.destroy');
+
+    
 });
