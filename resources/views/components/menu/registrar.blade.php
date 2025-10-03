@@ -18,7 +18,7 @@
 
     <!-- User Management -->
     <li class="slide">
-        <a href="#" class="side-menu__item text-gray-700">
+        <a href="{{ route('user_management.index') }}" class="side-menu__item text-gray-700">
             <i class="w-6 h-4 side-menu__icon bi bi-pencil-square text-gray-700"></i>
             <span class="side-menu__label text-gray-700">User Management</span>
         </a>

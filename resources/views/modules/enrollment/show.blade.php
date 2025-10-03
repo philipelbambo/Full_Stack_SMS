@@ -1,13 +1,16 @@
-    @extends('layouts.enrollment.app')
+    {{-- resources/views/modules/enrollment/show.blade.php --}}
+    @extends('modules.enrollment.app')
+
+    @section('page-title', 'Enrollment Details')
 
     @section('content')
         <h2 class="text-xl font-semibold mb-4">Enrollment Details</h2>
 
         <div class="bg-white shadow p-6 rounded space-y-4">
-            <p><strong>Student:</strong> {{ $enrollment->student->name }}</p>
-            <p><strong>Course:</strong> {{ $enrollment->course->name }}</p>
-            <p><strong>Enrollment Date:</strong> {{ $enrollment->enrollment_date }}</p>
-            <p><strong>Status:</strong> {{ $enrollment->status }}</p>
+            <p><strong>Student:</strong> {{ $enrollment->student->name ?? 'N/A' }}</p>
+            <p><strong>Course:</strong> {{ $enrollment->course->name ?? 'N/A' }}</p>
+            <p><strong>Enrollment Date:</strong> {{ $enrollment->enrolled_at ?? 'N/A' }}</p>
+            <p><strong>Status:</strong> {{ ucfirst($enrollment->status) }}</p>
         </div>
 
         <div class="mt-6 space-x-2">

@@ -8,6 +8,18 @@
         </svg>
     </button>
 
+    <!-- LOADING OVERLAY -->
+    <div id="loading-overlay" class="fixed inset-0 bg-black/30 backdrop-blur-sm z-50 flex items-center justify-center hidden">
+        <div class="relative">
+            <!-- Outer ring -->
+            <div class="w-20 h-20 rounded-full border-4 border-transparent border-t-[#3761d4] animate-spin"></div>
+            <!-- Inner glow (optional for texture) -->
+            <div class="absolute inset-0 w-20 h-20 rounded-full border-4 border-transparent border-t-white/20 animate-spin" style="animation-duration: 1.2s;"></div>
+            <!-- Optional: Subtle shimmer effect -->
+            <div class="absolute inset-0 w-20 h-20 rounded-full animate-pulse bg-[#D4AF37]/10 blur-sm"></div>
+        </div>
+    </div>
+
     <div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 px-4 sm:px-6 lg:px-8">
         <div class="max-w-md w-full space-y-8 bg-white/80 backdrop-blur-sm p-8 sm:p-10 rounded-2xl shadow-xl border border-gray-200/50">
             <!-- Logo -->
@@ -27,7 +39,7 @@
             @endsession
 
             <!-- Login Form -->
-            <form method="POST" action="{{ route('login') }}" class="mt-8 space-y-6">
+            <form id="login-form" method="POST" action="{{ route('login') }}" class="mt-8 space-y-6">
                 @csrf
                 <!-- Email Field -->
                 <div>
@@ -35,7 +47,7 @@
                     <div class="mt-1.5">
                         <input id="email" name="email" type="email" required autofocus autocomplete="username"
                             placeholder="Enter your email"
-                            class="w-full px-4 py-3.5 text-gray-900 placeholder-gray-500 bg-white/90 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition duration-200 ease-in-out shadow-sm">
+                            class="w-full px-4 py-3.5 text-gray-900 placeholder-gray-500 bg-white/90 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#3761d4] focus:border-transparent transition duration-200 ease-in-out shadow-sm">
                     </div>
                 </div>
 
@@ -45,7 +57,7 @@
                     <div class="mt-1.5 relative">
                         <input id="password" name="password" type="password" required autocomplete="current-password"
                             placeholder="Enter your password"
-                            class="w-full px-4 py-3.5 pr-12 text-gray-900 placeholder-gray-500 bg-white/90 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition duration-200 ease-in-out shadow-sm">
+                            class="w-full px-4 py-3.5 pr-12 text-gray-900 placeholder-gray-500 bg-white/90 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#3761d4] focus:border-transparent transition duration-200 ease-in-out shadow-sm">
                         <button type="button" onclick="togglePasswordVisibility()"
                                 class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-gray-500 hover:text-gray-800 focus:outline-none">
                             <svg id="eye-open" class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="display: none;">
@@ -106,5 +118,18 @@
                 eyeClosed.style.display = 'block';
             }
         }
+
+        // Handle form submission with loading spinner
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent default form submission
+
+            // Show loading overlay
+            document.getElementById('loading-overlay').classList.remove('hidden');
+
+            // Optional: Add a tiny delay for UX smoothness (remove if you want instant submit)
+            setTimeout(() => {
+                this.submit(); // Submit the form after showing loader
+            }, 300); // 300ms feels natural
+        });
     </script>
 </x-guest-layout>

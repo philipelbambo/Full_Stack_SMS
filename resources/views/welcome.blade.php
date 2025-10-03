@@ -261,78 +261,107 @@
         <div class="absolute inset-0 bg-gradient-to-r from-[#2C5282]/80 to-transparent z-10"></div>
         <img src="./assets/images/sms10.png" alt="Student Management System" class="w-full h-full object-cover">
         
-        <!-- 3D Carousel for Developers -->
-        <div class="absolute left-8 top-1/2 -translate-y-1/2 z-30 w-64 h-80">
-            <div class="carousel-container perspective-1000">
-                <div class="carousel-track" id="developerCarousel">
-                    <!-- Developer Card 1 -->
-                    <div class="carousel-card">
-                        <div class="card-inner bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 shadow-2xl">
-                            <div class="w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden border-4 border-white/30 shadow-lg">
-                               <img src="./assets/images/imagev1.png" alt="Project Manager" class="w-full h-full object-cover">
+    <!-- 3D Carousel for Departments -->
+    <div class="absolute left-8 top-1/2 -translate-y-1/2 z-30 w-64 h-80">
+        <div class="carousel-container perspective-1000">
+            <div class="carousel-track" id="developerCarousel">
+                <!-- Card 1 -->
+                <div class="carousel-card">
+                    <div class="card-inner bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 shadow-2xl">
+                        <div class="w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden border-4 border-white/30 shadow-lg">
+                            <img src="./assets/images/arts.png" alt="CAS" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-white text-lg font-bold text-center mb-1">CAS</h3>
+                        <p class="text-white/80 text-xs text-center">Department</p>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="carousel-card">
+                    <div class="card-inner bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 shadow-2xl">
+                        <div class="w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden border-4 border-white/30 shadow-lg">
+                            <img src="./assets/images/educ.png" alt="EDUC" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-white text-lg font-bold text-center mb-1">EDUC</h3>
+                        <p class="text-white/80 text-xs text-center">Department</p>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="carousel-card">
+                    <div class="card-inner bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 shadow-2xl">
+                        <div class="w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden border-4 border-white/30 shadow-lg">
+                            <img src="./assets/images/blis.png" alt="BLIS" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-white text-lg font-bold text-center mb-1">BLIS</h3>
+                        <p class="text-white/80 text-xs text-center">Department</p>
+                    </div>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="carousel-card">
+                    <div class="card-inner bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 shadow-2xl">
+                        <div class="w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden border-4 border-white/30 shadow-lg">
+                            <img src="./assets/images/crim.png" alt="BSCRIM" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-white text-lg font-bold text-center mb-1">BSCRIM</h3>
+                        <p class="text-white/80 text-xs text-center">Department</p>
+                    </div>
+                </div>
+                
+                <!-- Card 5 -->
+                <div class="carousel-card">
+                    <div class="card-inner bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 shadow-2xl">
+                        <div class="w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden border-4 border-white/30 shadow-lg">
+                            <img src="./assets/images/BA.png" alt="BSBA" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-white text-lg font-bold text-center mb-1">BSBA</h3>
+                        <p class="text-white/80 text-xs text-center">Department</p>
+                    </div>
+                </div>
 
-                            </div>
-                            <h3 class="text-white text-lg font-bold text-center mb-1">Project Manager</h3>
-                            <p class="text-white/80 text-xs text-center">Team Lead</p>
+                <!-- Card 6 -->
+                <div class="carousel-card">
+                    <div class="card-inner bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 shadow-2xl">
+                        <div class="w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden border-4 border-white/30 shadow-lg">
+                            <img src="./assets/images/HM.png" alt="BSHM" class="w-full h-full object-cover">
                         </div>
+                        <h3 class="text-white text-lg font-bold text-center mb-1">BSHM</h3>
+                        <p class="text-white/80 text-xs text-center">Department</p>
                     </div>
-                    
-                    <!-- Developer Card 2 -->
-                    <div class="carousel-card">
-                        <div class="card-inner bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 shadow-2xl">
-                            <div class="w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden border-4 border-white/30 shadow-lg">
-                                <img src="./assets/images/image2.png" alt="System Analyst" class="w-full h-full object-cover">
-                            </div>
-                            <h3 class="text-white text-lg font-bold text-center mb-1">System Analyst</h3>
-                            <p class="text-white/80 text-xs text-center">Requirements Specialist</p>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="carousel-card">
+                    <div class="card-inner bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 shadow-2xl">
+                        <div class="w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden border-4 border-white/30 shadow-lg">
+                            <img src="./assets/images/it.png" alt="BSIT" class="w-full h-full object-cover">
                         </div>
+                        <h3 class="text-white text-lg font-bold text-center mb-1">BSIT</h3>
+                        <p class="text-white/80 text-xs text-center">Department</p>
                     </div>
-                    
-                    <!-- Developer Card 3 -->
-                    <div class="carousel-card">
-                        <div class="card-inner bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 shadow-2xl">
-                            <div class="w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden border-4 border-white/30 shadow-lg">
-                                <img src="./assets/images/image3.png" alt="Technical Writer" class="w-full h-full object-cover">
-                            </div>
-                            <h3 class="text-white text-lg font-bold text-center mb-1">Technical Writer</h3>
-                            <p class="text-white/80 text-xs text-center">Documentation Expert</p>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="carousel-card">
+                    <div class="card-inner bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 shadow-2xl">
+                        <div class="w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden border-4 border-white/30 shadow-lg">
+                            <img src="./assets/images/MID.png" alt="BSMID" class="w-full h-full object-cover">
                         </div>
-                    </div>
-                    
-                    <!-- Developer Card 4 -->
-                    <div class="carousel-card">
-                        <div class="card-inner bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 shadow-2xl">
-                            <div class="w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden border-4 border-white/30 shadow-lg">
-                                <img src="./assets/images/image4.png" alt="Frontend Developer" class="w-full h-full object-cover">
-                            </div>
-                            <h3 class="text-white text-lg font-bold text-center mb-1">Frontend Developer</h3>
-                            <p class="text-white/80 text-xs text-center">Interface Specialist</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Developer Card 5 -->
-                    <div class="carousel-card">
-                        <div class="card-inner bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 shadow-2xl">
-                            <div class="w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden border-4 border-white/30 shadow-lg">
-                                <img src="./assets/images/image5.jpg" alt="Backend Developer" class="w-full h-full object-cover">
-                            </div>
-                            <h3 class="text-white text-lg font-bold text-center mb-1">Backend Developer</h3>
-                            <p class="text-white/80 text-xs text-center">System Architect</p>
-                        </div>
+                        <h3 class="text-white text-lg font-bold text-center mb-1">BSMID</h3>
+                        <p class="text-white/80 text-xs text-center">Department</p>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <div class="absolute inset-0 z-20 flex items-center justify-start">
+    </div>
+
+    <!-- Rest of your content (unchanged) -->
+    <div class="absolute inset-0 z-20 flex items-center justify-start">
         <div class="container text-white max-w-3xl flex flex-col justify-center h-full transform translate-y-1/4">
-            <!-- Align content to left -->
             <div class="text-left">
-                <!-- Main Welcome -->
                 <h1 class="text-4xl md:text-5xl font-bold mb-2">Welcome to Tagoloan Community College</h1>
                 <p class="text-xl font-bold opacity-90 mb-4">Empowering students through innovation, integrity, and excellence.</p>
-
-                <!-- Squad Quotes -->
                 <div class="space-y-1 q">
                     <p class="text-lg font-bold italic opacity-90">"We build systems with pride, making every click count!"</p>
                     <p class="text-lg font-bold italic opacity-90">"Coding today, shaping the future tomorrow."</p>
@@ -369,27 +398,17 @@
             transform-style: preserve-3d;
             transition: all 0.5s ease;
         }
-        
-        .carousel-card:nth-child(1) {
-            transform: translate(-50%, -50%) rotateY(0deg) translateZ(300px);
-        }
-        
-        .carousel-card:nth-child(2) {
-            transform: translate(-50%, -50%) rotateY(72deg) translateZ(300px);
-        }
-        
-        .carousel-card:nth-child(3) {
-            transform: translate(-50%, -50%) rotateY(144deg) translateZ(300px);
-        }
-        
-        .carousel-card:nth-child(4) {
-            transform: translate(-50%, -50%) rotateY(216deg) translateZ(300px);
-        }
-        
-        .carousel-card:nth-child(5) {
-            transform: translate(-50%, -50%) rotateY(288deg) translateZ(300px);
-        }
-        
+
+        /* Updated for 8 cards: 360 / 8 = 45 degrees spacing */
+        .carousel-card:nth-child(1) { transform: translate(-50%, -50%) rotateY(0deg)   translateZ(300px); }
+        .carousel-card:nth-child(2) { transform: translate(-50%, -50%) rotateY(45deg)  translateZ(300px); }
+        .carousel-card:nth-child(3) { transform: translate(-50%, -50%) rotateY(90deg)  translateZ(300px); }
+        .carousel-card:nth-child(4) { transform: translate(-50%, -50%) rotateY(135deg) translateZ(300px); }
+        .carousel-card:nth-child(5) { transform: translate(-50%, -50%) rotateY(180deg) translateZ(300px); }
+        .carousel-card:nth-child(6) { transform: translate(-50%, -50%) rotateY(225deg) translateZ(300px); }
+        .carousel-card:nth-child(7) { transform: translate(-50%, -50%) rotateY(270deg) translateZ(300px); }
+        .carousel-card:nth-child(8) { transform: translate(-50%, -50%) rotateY(315deg) translateZ(300px); }
+
         .card-inner {
             width: 100%;
             height: 100%;
@@ -423,7 +442,7 @@
             }
         }
         
-        /* Pause animation on hover */
+        /* Pause on hover — still works! */
         .carousel-container:hover .carousel-track {
             animation-play-state: paused;
         }
@@ -514,43 +533,62 @@
                     </div>
                 </div>
 
-                <!-- ENLARGED Image Slider (Right Side) -->
-                <div class="lg:w-3/5">
-                    <div class="relative rounded-xl overflow-hidden shadow-xl border border-gray-100">
-                        <!-- Slider Container - Taller & Wider -->
-                        <div id="tagoloanSlider" class="relative h-[400px] sm:h-[450px] md:h-[500px] lg:h-[550px]">
-                            <!-- Slides Wrapper -->
-                            <div class="absolute inset-0 flex transition-transform duration-700 ease-in-out">
-                                <img src="./assets/images/tcchym1.png" alt="Tagoloan Community College" class="w-full h-full object-cover flex-shrink-0">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNFFoMKE94P75LWttGWQ8tkE22bS5U7TZFsNQOcuLUXmDC-oDXdZdjgzRWbFWgO4wCZfU&usqp=CAU" alt="Tagoloan Landscape" class="w-full h-full object-cover flex-shrink-0">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFur_DXqf0hY0uB3GaDdJlGmLv0Dj10JskhVz90Y_pRu_iH1fuI9wkJY2Be5Weckqfdj4&usqp=CAU" alt="Students at TCC" class="w-full h-full object-cover flex-shrink-0">
-                                <!-- Add more images here if needed -->
-                            </div>
-                        </div>
+    <!-- ENLARGED Image Slider (Right Side) -->
+        <div class="lg:w-3/5">
+            <div class="relative rounded-xl overflow-hidden shadow-xl border border-gray-100">
+                <!-- Slider Container - Taller & Wider -->
+                <div id="tagoloanSlider" class="relative h-[400px] sm:h-[450px] md:h-[500px] lg:h-[550px]">
+                    <!-- Slides Wrapper -->
+                    <div class="absolute inset-0 flex transition-transform duration-700 ease-in-out">
+                        <!-- Image 1 -->
+                        <img src="{{ asset('assets/Gallery/photo1.jpg') }}" 
+                            alt="Tagoloan Community College" class="w-full h-full object-cover flex-shrink-0">
 
-                        <!-- Navigation Arrows -->
-                        <button id="prevBtn" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all duration-300 z-20">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                            </svg>
-                        </button>
-                        <button id="nextBtn" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all duration-300 z-20">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                            </svg>
-                        </button>
+                        <!-- Image 2 -->
+                        <img src="{{ asset('assets/Gallery/photo2.jpg') }}" 
+                            alt="Tagoloan Landscape" class="w-full h-full object-cover flex-shrink-0">
 
-                        <!-- Dots Indicator -->
-                        <div id="sliderDots" class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20">
-                            <button class="w-3 h-3 rounded-full bg-white/90"></button>
-                            <button class="w-3 h-3 rounded-full bg-white/50"></button>
-                            <button class="w-3 h-3 rounded-full bg-white/50"></button>
-                        </div>
+                        <!-- Image 3 -->
+                        <img src="{{ asset('assets/Gallery/photo3.jpg') }}" 
+                            alt="Students at TCC" class="w-full h-full object-cover flex-shrink-0">
+
+                        <!-- Image 4 -->
+                        <img src="{{ asset('assets/Gallery/photo4.jpg') }}" 
+                            alt="TCC Event" class="w-full h-full object-cover flex-shrink-0">
+
+                        <!-- Image 5 -->
+                        <img src="{{ asset('assets/Gallery/photo5.jpg') }}" 
+                            alt="Campus Activity" class="w-full h-full object-cover flex-shrink-0">
+
+                        <!-- Image 6 -->
+                        <img src="{{ asset('assets/Gallery/photo6.jpg') }}" 
+                            alt="Community Gathering" class="w-full h-full object-cover flex-shrink-0">
                     </div>
+                </div>
+
+                <!-- Navigation Arrows -->
+                <button id="prevBtn" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all duration-300 z-20">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button id="nextBtn" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all duration-300 z-20">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+
+                <!-- Dots Indicator -->
+                <div id="sliderDots" class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20">
+                    <button class="w-3 h-3 rounded-full bg-white/90"></button>
+                    <button class="w-3 h-3 rounded-full bg-white/50"></button>
+                    <button class="w-3 h-3 rounded-full bg-white/50"></button>
+                    <button class="w-3 h-3 rounded-full bg-white/50"></button>
+                    <button class="w-3 h-3 rounded-full bg-white/50"></button>
+                    <button class="w-3 h-3 rounded-full bg-white/50"></button>
                 </div>
             </div>
         </div>
-
         <!-- Slider JavaScript -->
         <script>
             document.addEventListener('DOMContentLoaded', () => {
@@ -641,76 +679,86 @@
         </div>
     </section>
 
-    <!-- Departments Showcase -->
-    <section class="section bg-white py-12">
-    <div class="container mx-auto text-center">
-        <h2 class="section-header font-bold text-3xl">Our Departments</h2>
-        <p class="mt-4 max-w-5xl mx-auto text-gray-600 font-medium leading-relaxed">
-        Tagoloan Community College is dedicated to providing quality education that nurtures 
-        talent, builds strong character, and equips students with the skills needed to thrive 
-        in their chosen fields. Our diverse departments reflect our commitment to academic 
-        excellence and community development, ensuring that every learner is prepared to 
-        contribute meaningfully to society and the world.
+    <!-- Pride of the Tagoloan Community College - Single Infinite Slider -->
+    <section class="section bg-gradient-to-b from-gray-50 to-white py-16">
+    <div class="container mx-auto text-center px-4">
+        <h2 class="section-header font-bold text-3xl md:text-4xl text-blue-800">Pride of the Tagoloan Community College</h2>
+        <p class="mt-5 max-w-4xl mx-auto text-gray-700 font-medium leading-relaxed">
+        Celebrating the spirit, achievements, and vibrant community that make Tagoloan Community College a beacon of learning, 
+        innovation, and service in Northern Mindanao.
         </p>
     </div>
 
-    <div class="container mx-auto mt-12 overflow-hidden">
+    <div class="w-full mx-auto mt-12 overflow-hidden">
         <div class="slider-container">
         <div class="slider-track slider-right">
-            <!-- Department Cards -->
+            <!-- Combined Slides: All 16 unique moments -->
             <div class="photo-slide">
-            <img src="https://www.tcc.edu.ph/assets/logo/arts.jpg" alt="College of Arts and Sciences" class="slide-img">
-            <p class="font-bold text-xl mt-4">College of Arts and Sciences (CAS)</p>
-            <p class="font-bold text-gray-700 text-center">Creativity with purpose.</p>
+            <img src="{{ asset('assets/Gallery/image1.jpg') }}" alt="TCC Campus Life" class="slide-img">
+            <p class="font-bold text-lg mt-3">Campus Spirit</p>
+            <p class="text-gray-600 text-sm">Unity in learning and growth</p>
             </div>
             <div class="photo-slide">
-            <img src="https://www.tcc.edu.ph/assets/logo/educ.png" alt="College of Education" class="slide-img">
-            <p class="font-bold text-xl mt-4">College of Education (EDUC)</p>
-            <p class="font-bold text-gray-700 text-center">Shaping future educators.</p>
+            <img src="{{ asset('assets/Gallery/image2.jpg') }}" alt="TCC Graduation" class="slide-img">
+            <p class="font-bold text-lg mt-3">Graduation Day</p>
+            <p class="text-gray-600 text-sm">Milestones of success</p>
             </div>
             <div class="photo-slide">
-            <img src="https://www.tcc.edu.ph/assets/logo/blis.png" alt="College of Library and Information Studies" class="slide-img">
-            <p class="font-bold text-xl mt-4">College of Library and Information Studies (BLIS)</p>
-            <p class="font-bold text-gray-700 text-center">Understanding society.</p>
+            <img src="{{ asset('assets/Gallery/image3.jpg') }}" alt="TCC Community Outreach" class="slide-img">
+            <p class="font-bold text-lg mt-3">Community Service</p>
+            <p class="text-gray-600 text-sm">Serving with heart</p>
             </div>
             <div class="photo-slide">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZYtJx3wbtjPu23euXi5IKwcU3GRIcf22qyQ&s" alt="Criminology Department" class="slide-img">
-            <p class="font-bold text-xl mt-4">Criminology Department (BSCRIM)</p>
-            <p class="font-bold text-gray-700 text-center">Justice & public safety.</p>
+            <img src="{{ asset('assets/Gallery/image4.jpg') }}" alt="TCC Students in Class" class="slide-img">
+            <p class="font-bold text-lg mt-3">Classroom Excellence</p>
+            <p class="text-gray-600 text-sm">Where knowledge thrives</p>
             </div>
             <div class="photo-slide">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8dzuMLEXIobHLGp6FyFPmxsq1vzGtTM6S2HrJBs0YowPtEdmkyxiP-CgZlUO9VpmS9t8&usqp=CAU" alt="College of Business Administration" class="slide-img">
-            <p class="font-bold text-xl mt-4">College of Business Administration (BSBA)</p>
-            <p class="font-bold text-gray-700 text-center">Leadership & entrepreneurship.</p>
+            <img src="{{ asset('assets/Gallery/image5.jpg') }}" alt="TCC Cultural Event" class="slide-img">
+            <p class="font-bold text-lg mt-3">Cultural Pride</p>
+            <p class="text-gray-600 text-sm">Celebrating heritage</p>
             </div>
             <div class="photo-slide">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ8L9bPDN-TIVhAVhMVbPIYfmTFiPpqnC-fQ&s" alt="College of Hospitality Management" class="slide-img">
-            <p class="font-bold text-xl mt-4">College of Hospitality Management (BSHM)</p>
-            <p class="font-bold text-gray-700 text-center">Excellence in service.</p>
+            <img src="{{ asset('assets/Gallery/image6.jpg') }}" alt="TCC Research" class="slide-img">
+            <p class="font-bold text-lg mt-3">Innovation & Research</p>
+            <p class="text-gray-600 text-sm">Pioneering local solutions</p>
             </div>
             <div class="photo-slide">
-            <img src="https://www.tcc.edu.ph/assets/logo/it.png" alt="Information Technology Department" class="slide-img">
-            <p class="font-bold text-xl mt-4">Information Technology Department (BSIT)</p>
-            <p class="font-bold text-gray-700 text-center">Logic & problem-solving.</p>
+            <img src="{{ asset('assets/Gallery/image7.jpg') }}" alt="TCC Sports" class="slide-img">
+            <p class="font-bold text-lg mt-3">Athletic Excellence</p>
+            <p class="text-gray-600 text-sm">Strength and discipline</p>
             </div>
             <div class="photo-slide">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8sK1Vx6vF9yXvU6vQYJdXh2qZvK1jJvQ&s=10" alt="Midwifery Department" class="slide-img">
-            <p class="font-bold text-xl mt-4">Midwifery Department (BSMID)</p>
-            <p class="font-bold text-gray-700 text-center">Compassionate maternal care.</p>
+            <img src="{{ asset('assets/Gallery/image8.jpg') }}" alt="TCC Leadership" class="slide-img">
+            <p class="font-bold text-lg mt-3">Student Leadership</p>
+            <p class="text-gray-600 text-sm">Voices of tomorrow</p>
             </div>
-
-            <!-- Duplicates for seamless scroll -->
+            <!-- Bottom row slides (now part of main row) -->
             <div class="photo-slide">
-            <img src="https://www.tcc.edu.ph/assets/logo/arts.jpg" alt="College of Arts and Sciences" class="slide-img">
-            <p class="font-bold text-xl mt-4">College of Arts and Sciences (CAS)</p>
-            <p class="font-bold text-gray-700 text-center">Creativity with purpose.</p>
+            <img src="{{ asset('assets/Gallery/image9.jpg') }}" alt="TCC Faculty" class="slide-img">
+            <p class="font-bold text-lg mt-3">Dedicated Faculty</p>
+            <p class="text-gray-600 text-sm">Guiding with passion</p>
             </div>
             <div class="photo-slide">
-            <img src="https://www.tcc.edu.ph/assets/logo/educ.png" alt="College of Education" class="slide-img">
-            <p class="font-bold text-xl mt-4">College of Education (EDUC)</p>
-            <p class="font-bold text-gray-700 text-center">Shaping future educators.</p>
+            <img src="{{ asset('assets/Gallery/image10.jpg') }}" alt="TCC Library" class="slide-img">
+            <p class="font-bold text-lg mt-3">Learning Hub</p>
+            <p class="text-gray-600 text-sm">Silent halls of wisdom</p>
             </div>
-            <!-- ...repeat duplicates for seamless scroll -->
+            <div class="photo-slide">
+            <img src="{{ asset('assets/Gallery/image11.jpg') }}" alt="TCC Environment" class="slide-img">
+            <p class="font-bold text-lg mt-3">Green Campus</p>
+            <p class="text-gray-600 text-sm">Sustainable and serene</p>
+            </div>
+            <div class="photo-slide">
+            <img src="{{ asset('assets/Gallery/image12.jpg') }}" alt="TCC Alumni" class="slide-img">
+            <p class="font-bold text-lg mt-3">Alumni Success</p>
+            <p class="text-gray-600 text-sm">Legacy of impact</p>
+            </div>
+            <div class="photo-slide">
+            <img src="{{ asset('assets/Gallery/image13.jpg') }}" alt="TCC Technology" class="slide-img">
+            <p class="font-bold text-lg mt-3">Digital Learning</p>
+            <p class="text-gray-600 text-sm">Embracing the future</p>
+            </div>
         </div>
         </div>
     </div>
@@ -725,16 +773,12 @@
 
     .slider-track {
     display: flex;
-    gap: 1.5rem;
+    gap: 2.25rem; /* 36px spacing between cards */
     width: max-content;
+    animation: scrollRight 70s infinite linear;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-    animation-play-state: running !important;
     will-change: transform;
-    }
-
-    .slider-right {
-    animation: scrollRight 45s infinite linear;
     }
 
     @keyframes scrollRight {
@@ -747,35 +791,43 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #ffffff;
-    padding: 1.5rem; /* slightly taller */
-    border-radius: 1rem;
-    min-width: 260px; /* slightly wider */
-    max-width: 300px; /* slightly wider */
+    padding: 1.75rem 1.25rem;
+    border-radius: 18px;
+    min-width: 290px;
+    max-width: 320px;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .photo-slide:hover {
+    transform: translateY(-6px);
     }
 
     .slide-img {
-    width: 11rem; /* slightly wider */
-    height: 12rem; /* slightly taller */
+    width: 100%;
+    height: 300px; /* Taller image as requested */
     object-fit: cover;
-    border-radius: 0.75rem;
-    margin-bottom: 1rem;
+    border-radius: 14px;
+    margin-bottom: 1.1rem;
     }
 
-    /* Mobile adjustments */
+    /* Mobile Responsive */
     @media (max-width: 768px) {
-    .slider-right {
-        animation-duration: 60s !important;
-    }
-
-    .slide-img {
-        width: 9rem;
-        height: 10rem;
+    .slider-track {
+        animation-duration: 90s !important;
+        gap: 1.5rem;
     }
 
     .photo-slide {
-        min-width: 200px;
-        padding: 1.25rem;
+        min-width: 240px;
+        padding: 1.5rem 1rem;
+    }
+
+    .slide-img {
+        height: 260px;
+    }
+
+    h2 {
+        font-size: 1.875rem;
     }
     }
     </style>

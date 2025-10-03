@@ -17,7 +17,8 @@ use App\Http\Controllers\AssignedSubjectController;
 use App\Http\Controllers\ArchivedController; // ✅ added for Archived module
 use App\Http\Controllers\TrashController;
 
-
+// ✅ Add this for User Management
+use App\Http\Controllers\UserManagementController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -139,13 +140,22 @@ Route::middleware([
         Route::delete('/{assignedSubject}', [AssignedSubjectController::class, 'destroy'])->name('destroy');
     });
 
-    // ✅ Archived module (added safely)
-    Route::resource('archived', ArchivedController::class);
+    // ✅ User Management module (just added safely)
+    Route::prefix('user-management')->name('user_management.')->group(function () {
+        Route::get('/', [UserManagementController::class, 'index'])->name('index');
+        Route::get('/create', [UserManagementController::class, 'create'])->name('create');
+        Route::post('/', [UserManagementController::class, 'store'])->name('store');
+        Route::get('/{user_management}', [UserManagementController::class, 'show'])->name('show');
+        Route::get('/{user_management}/edit', [UserManagementController::class, 'edit'])->name('edit');
+        Route::put('/{user_management}', [UserManagementController::class, 'update'])->name('update');
+        Route::delete('/{user_management}', [UserManagementController::class, 'destroy'])->name('destroy');
+    });
 
+    // ✅ Archived module (already present)
+    Route::resource('archived', ArchivedController::class);
 
     Route::get('/trash', [TrashController::class, 'index'])->name('trash.index');
     Route::post('/trash/{id}/restore', [TrashController::class, 'restore'])->name('trash.restore');
     Route::delete('/trash/{id}', [TrashController::class, 'destroy'])->name('trash.destroy');
 
-    
 });
